@@ -197,7 +197,9 @@ a { text-decoration: none; color: inherit; }
   .section-title { font-size: 28px; }
 }
 @media (max-width: 480px) {
-  .hero h1 { font-size: 28px; }
+  .hero h1 { font-size: 31px; }
+  .hero-text { font-size: 17px; line-height: 1.65; }
+  .hero-creds { font-size: 15px; line-height: 1.5; }
   .hero-photo { width: 96px; height: 96px; }
   .footer-grid { grid-template-columns: 1fr; }
   .btn { width: 100%; justify-content: center; }

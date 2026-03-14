@@ -1,0 +1,117 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Roberto Schiraldi",
+      "jobTitle": "Formatore AI accreditato Regione Lombardia",
+      "description": "Formatore e consulente specializzato in Intelligenza Artificiale applicata al business. Aiuta PMI, professionisti e inoccupati ad adottare l'AI con percorsi pratici e formazione finanziata.",
+      "url": "https://sonodigitale.it",
+      "email": "roberto@sonodigitale.it",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Varese",
+        "addressRegion": "Lombardia",
+        "addressCountry": "IT"
+      },
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Atoma SRL",
+        "url": "https://atoma.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/roberto-schiraldi"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "name": "SONODIGITALE",
+      "url": "https://sonodigitale.it",
+      "description": "Formazione e consulenza AI accessibile per PMI, professionisti e persone in cerca di lavoro in Lombardia.",
+      "founder": {
+        "@type": "Person",
+        "name": "Roberto Schiraldi"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Lombardia"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "SONODIGITALE di Roberto Schiraldi",
+      "url": "https://sonodigitale.it",
+      "email": "roberto@sonodigitale.it",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Varese",
+        "addressRegion": "Lombardia",
+        "addressCountry": "IT"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "name": "Come accedere alla formazione AI finanziata in Lombardia",
+      "description": "Tre passaggi per accedere a percorsi di formazione sull'Intelligenza Artificiale finanziati fino al 100% in Lombardia.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Parliamo delle tue esigenze",
+          "text": "In una call gratuita capiamo insieme la tua situazione e individuiamo il percorso e il finanziamento giusto per te."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Troviamo il finanziamento",
+          "text": "Tra Progetto GOL, fondi interprofessionali, voucher regionali e bandi dedicati, identifichiamo l'opportunità attiva che copre fino al 100% dei costi."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Inizi la formazione",
+          "text": "Percorsi pratici e applicabili dal giorno dopo, dall'AI generativa al prompt engineering. Con attestato riconosciuto."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cos'è la formazione AI finanziata in Lombardia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formazione AI finanziata è un'opportunità offerta da Regione Lombardia e da fondi interprofessionali per permettere ad aziende, professionisti e persone in cerca di lavoro di frequentare corsi sull'Intelligenza Artificiale con costi coperti fino al 100%. I percorsi sono erogati da enti accreditati come Atoma SRL Milano e coprono competenze pratiche come prompt engineering, AI generativa e strumenti per la produttività."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Il corso AI del Progetto GOL è davvero gratuito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, il corso Intelligenza Artificiale per la Produttività erogato tramite il Progetto GOL di Regione Lombardia è completamente gratuito. Il corso dura 100 ore su 4 settimane e copre AI generativa, prompt engineering, strumenti per la ricerca lavoro, marketing digitale e personal branding. Al termine viene rilasciato un attestato di competenza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come può l'AI aiutare concretamente la mia azienda o attività?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'Intelligenza Artificiale può migliorare la produttività di una PMI in modi concreti: automatizzazione di attività ripetitive, creazione di contenuti per marketing, analisi rapida di dati, supporto al servizio clienti e ottimizzazione dei processi interni. Secondo l'Osservatorio del Politecnico di Milano, i lavoratori che usano strumenti AI risparmiano in media oltre 30 minuti per attività."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "AggregateRating",
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Atoma Formazione"
+      },
+      "ratingValue": "4.8",
+      "reviewCount": "49",
+      "bestRating": "5"
+    }
+  ]
+}

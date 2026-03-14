@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SONODIGITALE | Formazione AI Finanziata e Consulenza — Lombardia</title>
+<meta name="description" content="Roberto Schiraldi, formatore AI accreditato Regione Lombardia. Percorsi di formazione finanziata fino al 100% per PMI, professionisti e inoccupati. Prenota una call gratuita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Lato:wght@300;400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #FC7E15;
+  --orange-light: #FFF3E6;
+  --orange-dark: #D96A0B;
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #EEEEEE;
+  --gray-300: #E0E0E0;
+  --gray-500: #9E9E9E;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+  --font-display: 'League Gothic', sans-serif;
+  --font-heading: 'Lato', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --max-width: 1140px;
+  --section-padding: 80px 0;
+  --section-padding-mobile: 48px 0;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--gray-900); line-height: 1.6; background: var(--white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+.nav { position: sticky; top: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); z-index: 100; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.nav-brand { font-family: var(--font-display); font-size: 24px; letter-spacing: 1px; color: var(--black); text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { font-family: var(--font-body); font-size: 14px; font-weight: 500; color: var(--gray-700); transition: color 0.2s; }
+.nav-links a:hover { color: var(--orange); }
+.nav-cta { font-size: 14px; font-weight: 700; padding: 8px 20px; border-radius: 6px; background: var(--orange); color: var(--white); transition: background 0.2s; }
+.nav-cta:hover { background: var(--orange-dark); }
+.nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--gray-800); margin: 5px 0; transition: 0.3s; }
+
+/* BUTTONS */
+.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.25s ease; }
+.btn-primary { background: var(--orange); color: var(--white); }
+.btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(252,126,21,0.3); }
+.btn-secondary { background: transparent; color: var(--gray-800); border: 1.5px solid var(--gray-300); }
+.btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
+.btn-outline-orange { background: transparent; color: var(--orange); border: 1.5px solid var(--orange); }
+.btn-outline-orange:hover { background: var(--orange); color: var(--white); }
+.btn-sm { padding: 10px 20px; font-size: 13px; }
+
+/* SECTION TITLES */
+.section-tag { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+.section-title { font-family: var(--font-heading); font-size: 36px; font-weight: 700; line-height: 1.2; color: var(--gray-900); margin-bottom: 16px; }
+.section-subtitle { font-family: var(--font-body); font-size: 18px; color: var(--gray-600); line-height: 1.7; max-width: 680px; }
+
+/* ==================== HERO ==================== */
+.hero { padding: 80px 0 60px; }
+.hero-inner { display: flex; align-items: flex-start; gap: 40px; }
+.hero-photo { width: 120px; height: 120px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 3px solid var(--orange); }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-photo-placeholder { width: 100%; height: 100%; background: var(--gray-100); display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--gray-500); }
+.hero-content { flex: 1; }
+.hero h1 { font-family: var(--font-heading); font-size: 42px; font-weight: 700; line-height: 1.15; color: var(--gray-900); margin-bottom: 16px; }
+.hero h1 span { color: var(--orange); }
+.hero-text { font-size: 17px; color: var(--gray-600); line-height: 1.7; margin-bottom: 16px; max-width: 640px; }
+.hero-creds { font-size: 14px; color: var(--gray-500); margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.hero-creds span { white-space: nowrap; }
+.hero-creds span::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); margin-right: 8px; vertical-align: middle; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ==================== SMISTAMENTO ==================== */
+.smistamento { padding: var(--section-padding); background: var(--gray-50); }
+.persona-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+.persona-card { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: 12px; padding: 28px 20px; text-align: center; transition: all 0.3s ease; cursor: pointer; }
+.persona-card:hover { border-color: var(--orange); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.persona-icon { font-size: 32px; margin-bottom: 12px; }
+.persona-card h3 { font-family: var(--font-heading); font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--gray-900); }
+.persona-card p { font-size: 14px; color: var(--gray-600); line-height: 1.5; margin-bottom: 16px; }
+.persona-card .card-link { font-size: 13px; font-weight: 700; color: var(--orange); display: inline-flex; align-items: center; gap: 4px; }
+.persona-card .card-link::after { content: '→'; transition: transform 0.2s; }
+.persona-card:hover .card-link::after { transform: translateX(4px); }
+
+/* ==================== DATI ==================== */
+.dati { padding: var(--section-padding); }
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
+.stat-card { text-align: center; padding: 24px 16px; border: 1px solid var(--gray-200); border-radius: 12px; }
+.stat-num { font-family: var(--font-display); font-size: 48px; color: var(--orange); line-height: 1; margin-bottom: 8px; }
+.stat-label { font-size: 14px; color: var(--gray-600); line-height: 1.4; }
+.stat-source { font-size: 12px; color: var(--gray-500); margin-top: 16px; font-style: italic; }
+.ribaltamento { border-left: 4px solid var(--orange); padding: 20px 24px; margin: 32px 0; background: var(--orange-light); border-radius: 0 8px 8px 0; }
+.ribaltamento h3 { font-family: var(--font-heading); font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--gray-900); }
+.ribaltamento p { font-size: 16px; color: var(--gray-700); line-height: 1.6; }
+
+/* ==================== FORMAZIONE FINANZIATA ==================== */
+.formazione { padding: var(--section-padding); background: var(--gray-900); color: var(--white); }
+.formazione .section-title { color: var(--white); }
+.formazione .section-subtitle-light { color: rgba(255,255,255,0.7); font-size: 17px; font-style: italic; margin-bottom: 16px; }
+.formazione .section-text { color: rgba(255,255,255,0.8); font-size: 16px; line-height: 1.7; max-width: 680px; margin-bottom: 40px; }
+.steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+.step-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 24px 20px; text-align: center; }
+.step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--orange); color: var(--white); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+.step-card h4 { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.step-card p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.5; }
+.funds-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+.fund-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; text-align: center; }
+.fund-card h5 { font-family: var(--font-heading); font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.fund-card p { font-size: 12px; color: rgba(255,255,255,0.6); }
+.urgency-bar { background: rgba(252,126,21,0.15); border: 1px solid rgba(252,126,21,0.3); border-radius: 8px; padding: 14px 20px; margin-bottom: 28px; }
+.urgency-bar strong { color: var(--orange); font-size: 14px; }
+.urgency-bar span { color: rgba(255,255,255,0.7); font-size: 13px; margin-left: 8px; }
+.formazione .btn-primary { background: var(--orange); }
+.formazione .btn-secondary { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3); }
+.formazione .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
+
+/* ==================== TESTIMONIANZE ==================== */
+.testimonianze { padding: var(--section-padding); background: var(--gray-50); }
+.aggregate-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+.agg-score { font-family: var(--font-display); font-size: 48px; color: var(--orange); line-height: 1; }
+.agg-stars { color: var(--orange); font-size: 18px; letter-spacing: 2px; }
+.agg-text { font-size: 14px; color: var(--gray-600); }
+.agg-source { font-size: 12px; color: var(--gray-500); }
+.reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.review-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; }
+.review-stars { color: var(--orange); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+.review-quote { font-size: 14px; color: var(--gray-700); line-height: 1.6; font-style: italic; margin-bottom: 16px; }
+.review-author { display: flex; align-items: center; gap: 10px; }
+.review-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 14px; font-weight: 700; flex-shrink: 0; }
+.review-name { font-size: 13px; font-weight: 700; color: var(--gray-800); }
+.review-detail { font-size: 11px; color: var(--gray-500); }
+
+/* ==================== FAQ ==================== */
+.faq { padding: var(--section-padding); }
+.faq-list { max-width: 760px; margin: 32px 0; }
+.faq-item { border-bottom: 1px solid var(--gray-200); }
+.faq-question { font-family: var(--font-heading); font-size: 17px; font-weight: 700; color: var(--gray-900); padding: 20px 0 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.faq-question::after { content: '+'; font-size: 22px; color: var(--orange); font-weight: 400; transition: transform 0.2s; flex-shrink: 0; margin-left: 16px; }
+.faq-item.open .faq-question::after { content: '−'; }
+.faq-answer { font-size: 15px; color: var(--gray-600); line-height: 1.7; padding: 0 0 20px; }
+.faq-link { margin-top: 8px; }
+.faq-link a { font-size: 15px; font-weight: 700; color: var(--orange); display: inline-flex; align-items: center; gap: 6px; }
+.faq-link a:hover { text-decoration: underline; }
+
+/* ==================== CTA FINALE ==================== */
+.cta-finale { padding: var(--section-padding); }
+.cta-box { border: 2px solid var(--orange); border-radius: 16px; padding: 48px 40px; }
+.cta-box .section-title { text-align: center; }
+.cta-box .section-subtitle { text-align: center; margin: 0 auto 36px; }
+.cta-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.cta-option { border: 1px solid var(--gray-200); border-radius: 12px; padding: 28px 24px; }
+.cta-option.featured { border-color: var(--orange); background: var(--orange-light); }
+.cta-option-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray-500); margin-bottom: 12px; }
+.cta-option h3 { font-family: var(--font-heading); font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--gray-900); }
+.cta-option p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 16px; }
+.cta-option .note { font-size: 12px; color: var(--gray-500); margin-top: 10px; }
+
+/* ==================== FOOTER ==================== */
+.footer { background: var(--gray-900); color: rgba(255,255,255,0.8); padding: 60px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 32px; margin-bottom: 40px; }
+.footer-brand { font-family: var(--font-display); font-size: 22px; color: var(--white); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+.footer-tagline { font-size: 12px; color: rgba(255,255,255,0.5); font-style: italic; margin-bottom: 16px; }
+.footer-col-title { font-family: var(--font-heading); font-size: 13px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.footer-col a, .footer-col span { display: block; font-size: 13px; color: rgba(255,255,255,0.6); line-height: 2; }
+.footer-col a:hover { color: var(--orange); }
+.footer-col .highlight { color: var(--orange); font-weight: 700; }
+.footer-newsletter { display: flex; gap: 6px; margin-top: 8px; }
+.footer-newsletter input { flex: 1; padding: 8px 12px; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; background: rgba(255,255,255,0.06); color: var(--white); font-size: 13px; font-family: var(--font-body); }
+.footer-newsletter input::placeholder { color: rgba(255,255,255,0.4); }
+.footer-newsletter button { padding: 8px 16px; border-radius: 6px; background: var(--orange); color: var(--white); border: none; font-size: 13px; font-weight: 700; cursor: pointer; font-family: var(--font-body); }
+.footer-newsletter button:hover { background: var(--orange-dark); }
+.footer-newsletter-note { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 6px; }
+.footer-divider { height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 20px; }
+.footer-bottom { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.4); }
+.footer-bottom a { color: rgba(255,255,255,0.4); }
+.footer-bottom a:hover { color: var(--orange); }
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  :root { --section-padding: var(--section-padding-mobile); }
+  .nav-links { display: none; }
+  .nav-hamburger { display: block; }
+  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--white); padding: 16px 24px; border-bottom: 1px solid var(--gray-200); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .hero-inner { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+  .hero h1 { font-size: 32px; }
+  .hero-text { font-size: 15px; }
+  .hero-creds { justify-content: center; }
+  .hero-ctas { justify-content: center; }
+  .persona-cards { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; }
+  .funds-row { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .cta-box { padding: 32px 20px; }
+  .cta-options { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; gap: 4px; }
+  .section-title { font-size: 28px; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 28px; }
+  .hero-photo { width: 96px; height: 96px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .btn { width: 100%; justify-content: center; }
+}
+
+/* ANIMATIONS */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<!-- SCHEMA MARKUP JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Roberto Schiraldi",
+      "jobTitle": "Formatore AI accreditato Regione Lombardia",
+      "description": "Formatore e consulente specializzato in Intelligenza Artificiale applicata al business. Aiuta PMI, professionisti e inoccupati ad adottare l'AI con percorsi pratici e formazione finanziata.",
+      "url": "https://sonodigitale.it",
+      "email": "roberto@sonodigitale.it",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Varese",
+        "addressRegion": "Lombardia",
+        "addressCountry": "IT"
+      },
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Atoma SRL",
+        "url": "https://atoma.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/roberto-schiraldi"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "name": "SONODIGITALE",
+      "url": "https://sonodigitale.it",
+      "description": "Formazione e consulenza AI accessibile per PMI, professionisti e persone in cerca di lavoro in Lombardia.",
+      "founder": {
+        "@type": "Person",
+        "name": "Roberto Schiraldi"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Lombardia"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "SONODIGITALE di Roberto Schiraldi",
+      "url": "https://sonodigitale.it",
+      "email": "roberto@sonodigitale.it",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Varese",
+        "addressRegion": "Lombardia",
+        "addressCountry": "IT"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "name": "Come accedere alla formazione AI finanziata in Lombardia",
+      "description": "Tre passaggi per accedere a percorsi di formazione sull'Intelligenza Artificiale finanziati fino al 100% in Lombardia.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Parliamo delle tue esigenze",
+          "text": "In una call gratuita capiamo insieme la tua situazione e individuiamo il percorso e il finanziamento giusto per te."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Troviamo il finanziamento",
+          "text": "Tra Progetto GOL, fondi interprofessionali, voucher regionali e bandi dedicati, identifichiamo l'opportunità attiva che copre fino al 100% dei costi."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Inizi la formazione",
+          "text": "Percorsi pratici e applicabili dal giorno dopo, dall'AI generativa al prompt engineering. Con attestato riconosciuto."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cos'è la formazione AI finanziata in Lombardia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formazione AI finanziata è un'opportunità offerta da Regione Lombardia e da fondi interprofessionali per permettere ad aziende, professionisti e persone in cerca di lavoro di frequentare corsi sull'Intelligenza Artificiale con costi coperti fino al 100%. I percorsi sono erogati da enti accreditati come Atoma SRL Milano e coprono competenze pratiche come prompt engineering, AI generativa e strumenti per la produttività."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Il corso AI del Progetto GOL è davvero gratuito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, il corso Intelligenza Artificiale per la Produttività erogato tramite il Progetto GOL di Regione Lombardia è completamente gratuito. Il corso dura 100 ore su 4 settimane e copre AI generativa, prompt engineering, strumenti per la ricerca lavoro, marketing digitale e personal branding. Al termine viene rilasciato un attestato di competenza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come può l'AI aiutare concretamente la mia azienda o attività?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'Intelligenza Artificiale può migliorare la produttività di una PMI in modi concreti: automatizzazione di attività ripetitive, creazione di contenuti per marketing, analisi rapida di dati, supporto al servizio clienti e ottimizzazione dei processi interni. Secondo l'Osservatorio del Politecnico di Milano, i lavoratori che usano strumenti AI risparmiano in media oltre 30 minuti per attività."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "AggregateRating",
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Atoma Formazione"
+      },
+      "ratingValue": "4.8",
+      "reviewCount": "49",
+      "bestRating": "5"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-brand">SONODIGITALE</a>
+    <div class="nav-links" id="navLinks">
+      <a href="/formazione">Formazione</a>
+      <a href="/chi-sono">Chi sono</a>
+      <a href="/faq">FAQ</a>
+      <a href="/contatti" class="nav-cta">Contatti</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ==================== SEZIONE 1: HERO ==================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner fade-in">
+      <div class="hero-photo">
+        <!-- Sostituisci con la tua foto: <img src="foto-roberto.jpg" alt="Roberto Schiraldi - Formatore AI"> -->
+        <div class="hero-photo-placeholder">Foto Roberto</div>
+      </div>
+      <div class="hero-content">
+        <h1>L'Intelligenza Artificiale,<br><span>resa accessibile.</span></h1>
+        <p class="hero-text">Sono Roberto Schiraldi, formatore AI accreditato Regione Lombardia in collaborazione con Atoma SRL Milano, aiuto PMI, professionisti e persone in cerca di lavoro ad adottare l'Intelligenza Artificiale con percorsi pratici e formazione finanziata fino al 100%.</p>
+        <div class="hero-creds">
+          <span>70+ persone formate sull'AI</span>
+          <span>10 edizioni corso erogate</span>
+          <span>Accreditato Regione Lombardia</span>
+          <span>In collaborazione con Atoma SRL</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="/contatti" class="btn btn-primary">Prenota una call conoscitiva gratuita</a>
+          <a href="/formazione" class="btn btn-secondary">Scopri le opportunità di formazione</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SEZIONE 2: SMISTAMENTO ==================== -->
+<section class="smistamento">
+  <div class="container">
+    <div class="fade-in">
+      <div class="persona-cards">
+        <a href="/formazione#aziende" class="persona-card">
+          <div class="persona-icon">🏢</div>
+          <h3>Hai un'azienda?</h3>
+          <p>Forma il tuo team sull'AI con percorsi finanziati fino al 100%. Fondi interprofessionali, voucher regionali e bandi dedicati alle imprese lombarde.</p>
+          <span class="card-link">Scopri le opportunità per la tua azienda</span>
+        </a>
+        <a href="/formazione#professionisti" class="persona-card">
+          <div class="persona-icon">💼</div>
+          <h3>Sei un professionista?</h3>
+          <p>Integra l'AI nel tuo lavoro quotidiano. Più produttività, meno tempo perso in attività ripetitive. Percorsi pratici pensati per chi lavora.</p>
+          <span class="card-link">Scopri i percorsi per professionisti</span>
+        </a>
+        <a href="/formazione#gol" class="persona-card">
+          <div class="persona-icon">🎯</div>
+          <h3>Cerchi lavoro?</h3>
+          <p>Il Progetto GOL di Regione Lombardia ti offre un corso di Intelligenza Artificiale completamente gratuito. Competenze digitali spendibili subito nel mercato del lavoro.</p>
+          <span class="card-link">Scopri il corso gratuito</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SEZIONE 3: DATI ==================== -->
+<section class="dati">
+  <div class="container">
+    <div class="fade-in">
+      <h2 class="section-title">L'AI sta cambiando il lavoro in Italia.<br>Tu sei pronto?</h2>
+      <p class="section-subtitle">I numeri parlano chiaro: l'Intelligenza Artificiale non è più una tecnologia del futuro. È qui, ora. E chi non si adegua rischia di restare indietro.</p>
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-num">+93%</div>
+          <div class="stat-label">Annunci di lavoro che richiedono competenze AI nel 2025</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">7%</div>
+          <div class="stat-label">Delle piccole imprese italiane ha avviato un progetto AI</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">1,8 mld</div>
+          <div class="stat-label">Il valore del mercato AI in Italia, +50% in un anno</div>
+        </div>
+      </div>
+      <p class="stat-source">Fonte: Osservatorio Artificial Intelligence, Politecnico di Milano 2025</p>
+      <div class="ribaltamento">
+        <h3>Ma c'è una buona notizia.</h3>
+        <p>Non devi farlo da solo, e non deve costarti una fortuna. In Lombardia esistono percorsi di formazione AI finanziati fino al 100% — per aziende, professionisti e persone in cerca di lavoro. Il primo passo è capire quale opportunità fa per te.</p>
+      </div>
+      <a href="/formazione" class="btn btn-primary">Scopri le opportunità di formazione</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SEZIONE 4: FORMAZIONE FINANZIATA ==================== -->
+<section class="formazione" id="formazione-preview">
+  <div class="container">
+    <div class="fade-in">
+      <h2 class="section-title">Formazione AI con finanziamenti fino al 100%.</h2>
+      <p class="section-subtitle-light">Sì, esiste. Ed è più semplice di quanto pensi.</p>
+      <p class="section-text">In Lombardia sono attive diverse opportunità per formare il tuo team o te stesso sull'Intelligenza Artificiale, con costi coperti in tutto o in parte da fondi pubblici e interprofessionali. Come formatore accreditato Regione Lombardia, in collaborazione con Atoma SRL, ti guido in ogni passaggio.</p>
+      <div class="steps-row">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h4>Parliamo delle tue esigenze</h4>
+          <p>In una call gratuita capiamo insieme la tua situazione e individuiamo il percorso e il finanziamento giusto per te.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h4>Troviamo il finanziamento</h4>
+          <p>Tra Progetto GOL, fondi interprofessionali, voucher regionali e bandi dedicati, identifichiamo l'opportunità attiva.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h4>Inizi la formazione</h4>
+          <p>Percorsi pratici e applicabili dal giorno dopo. Dall'AI generativa al prompt engineering. Con attestato riconosciuto.</p>
+        </div>
+      </div>
+      <div class="funds-row">
+        <div class="fund-card">
+          <h5>Progetto GOL</h5>
+          <p>100% gratuito per inoccupati iscritti al Centro per l'Impiego</p>
+        </div>
+        <div class="fund-card">
+          <h5>Fondi interprofessionali</h5>
+          <p>Per aziende che versano lo 0,30% — formazione senza costi aggiuntivi</p>
+        </div>
+        <div class="fund-card">
+          <h5>Bandi regionali</h5>
+          <p>Voucher e contributi Regione Lombardia per PMI e professionisti</p>
+        </div>
+      </div>
+      <div class="urgency-bar">
+        <strong>Posti limitati per ogni edizione</strong>
+        <span>— Le classi sono a numero chiuso per garantire qualità. Contattami per verificare la disponibilità.</span>
+      </div>
+      <a href="/contatti" class="btn btn-primary">Verifica le opportunità per te</a>
+      <a href="/formazione" class="btn btn-secondary">Scopri il programma completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SEZIONE 5: TESTIMONIANZE ==================== -->
+<section class="testimonianze">
+  <div class="container">
+    <div class="fade-in">
+      <h2 class="section-title">Cosa dice chi ha partecipato</h2>
+      <div class="aggregate-bar">
+        <div class="agg-score">4,8</div>
+        <div>
+          <div class="agg-stars">★★★★★</div>
+          <div class="agg-text">49 recensioni su Google</div>
+          <div class="agg-source">Atoma Formazione — ente accreditato Regione Lombardia</div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"Con pazienza e chiarezza ha saputo rendere accessibili concetti complessi, coinvolgendo sempre i partecipanti. Il corso è ben strutturato e pensato per accompagnare passo dopo passo anche chi parte da zero."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:#5B7FBA">L</div>
+            <div>
+              <div class="review-name">Laura Santambrogio</div>
+              <div class="review-detail">Corsista AI · Progetto GOL · 5 stelle su Google</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"Non si limita a insegnare l'AI, la racconta come parte di una visione più ampia del mondo che stiamo vivendo oggi. La sua chiarezza, la capacità di ascolto e il modo con cui valorizza ogni studente rendono davvero unico questo corso."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:#3B8BD4">H</div>
+            <div>
+              <div class="review-name">Hugo Martini</div>
+              <div class="review-detail">Corsista AI · Progetto GOL · 5 stelle su Google</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"Corso eccezionale e docente ancora meglio. Ha tarato e modificato il tutto per adeguarsi alle nostre diverse capacità e livelli."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:#1D9E75">N</div>
+            <div>
+              <div class="review-name">Nadir Bacis</div>
+              <div class="review-detail">Corsista AI · Progetto GOL · 5 stelle su Google</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"Il corso di Intelligenza Artificiale mi ha permesso di imparare tantissime nozioni in modo piacevole. Grazie di cuore al Prof. Roberto per la disponibilità e la passione!"</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:#D85A30">D</div>
+            <div>
+              <div class="review-name">Dina Slima</div>
+              <div class="review-detail">Corsista AI · Progetto GOL · 5 stelle su Google</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SEZIONE 6: FAQ ==================== -->
+<section class="faq">
+  <div class="container">
+    <div class="fade-in">
+      <h2 class="section-title">Domande frequenti</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Cos'è la formazione AI finanziata in Lombardia?</div>
+          <div class="faq-answer">La formazione AI finanziata è un'opportunità offerta da Regione Lombardia e da fondi interprofessionali per permettere ad aziende, professionisti e persone in cerca di lavoro di frequentare corsi sull'Intelligenza Artificiale con costi coperti fino al 100%. I percorsi sono erogati da enti accreditati — come Atoma SRL Milano, con cui collaboro come formatore — e coprono competenze pratiche come prompt engineering, AI generativa, strumenti per la produttività e marketing con l'AI. Per le aziende sono disponibili voucher regionali e fondi interprofessionali; per gli inoccupati il Progetto GOL offre corsi completamente gratuiti.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Il corso AI del Progetto GOL è davvero gratuito?</div>
+          <div class="faq-answer">Sì, il corso "Intelligenza Artificiale per la Produttività" erogato tramite il Progetto GOL di Regione Lombardia è completamente gratuito per i partecipanti. Il programma è finanziato con fondi regionali ed è rivolto a persone disoccupate o inoccupate iscritte al Centro per l'Impiego. Il corso dura 100 ore distribuite su 4 settimane e copre AI generativa, prompt engineering, strumenti per la ricerca lavoro, marketing digitale e personal branding. Al termine viene rilasciato un attestato di competenza.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Come può l'AI aiutare concretamente la mia azienda o attività?</div>
+          <div class="faq-answer">L'Intelligenza Artificiale può migliorare la produttività di una PMI in modi concreti e misurabili: automatizzazione di attività ripetitive (report, email, gestione documenti), creazione di contenuti per marketing e social media, analisi rapida di dati e trend, supporto al servizio clienti, e ottimizzazione dei processi interni. Secondo l'Osservatorio del Politecnico di Milano, i lavoratori che usano strumenti AI risparmiano in media oltre 30 minuti per attività. Il punto di partenza non richiede grandi investimenti: con una formazione mirata sugli strumenti giusti, anche un team di 5 persone può ottenere risultati significativi in poche settimane.</div>
+        </div>
+      </div>
+      <div class="faq-link">
+        <a href="/faq">Tutte le domande frequenti →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SEZIONE 7: CTA FINALE ==================== -->
+<section class="cta-finale">
+  <div class="container">
+    <div class="fade-in">
+      <div class="cta-box">
+        <h2 class="section-title">Vuoi portare l'AI nel tuo lavoro?</h2>
+        <p class="section-subtitle">Che tu stia cercando formazione per il tuo team, un percorso per te o un primo orientamento, il prossimo passo è semplice.</p>
+        <div class="cta-options">
+          <div class="cta-option featured">
+            <div class="cta-option-tag">Scopri</div>
+            <h3>Scarica la guida gratuita</h3>
+            <p>10 modi concreti per usare l'AI nella tua attività — con esempi pratici, strumenti consigliati e primi passi da fare subito. Gratis, nella tua email.</p>
+            <a href="#" class="btn btn-primary btn-sm">Scarica la guida →</a>
+            <div class="note">Ricevi anche aggiornamenti su bandi e opportunità di formazione</div>
+          </div>
+          <div class="cta-option">
+            <div class="cta-option-tag">Agisci</div>
+            <h3>Prenota una call gratuita</h3>
+            <p>30 minuti insieme per capire la tua situazione, individuare le opportunità di finanziamento e definire il percorso più adatto a te.</p>
+            <a href="/contatti" class="btn btn-outline-orange btn-sm">Prenota la call →</a>
+            <div class="note">Senza impegno · Online o telefono · Rispondo entro 24h</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">SONODIGITALE</div>
+        <div class="footer-tagline">AI accessibile | Formazione finanziata | Per crescere</div>
+        <span>Roberto Schiraldi</span>
+        <span>Formatore AI accreditato</span>
+        <span>Regione Lombardia</span>
+        <span style="margin-top:8px;display:block">In collaborazione con</span>
+        <span style="color:var(--white);font-weight:700">Atoma SRL — Milano</span>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Pagine</div>
+        <a href="/formazione">Formazione e opportunità</a>
+        <a href="/chi-sono">Chi sono</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contatti">Contatti</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contatti</div>
+        <span>Varese, Lombardia</span>
+        <span>roberto@sonodigitale.it</span>
+        <a href="https://www.linkedin.com/in/roberto-schiraldi" class="highlight" target="_blank" rel="noopener">LinkedIn →</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Resta aggiornato</div>
+        <span>Tips AI, bandi e opportunità di formazione nella tua email.</span>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="La tua email" aria-label="Email per newsletter">
+          <button type="button">Iscriviti</button>
+        </div>
+        <div class="footer-newsletter-note">Niente spam. Solo valore. Cancellati quando vuoi.</div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span>SONODIGITALE di Roberto Schiraldi · P.IVA: [da inserire] · © 2026</span>
+      <span><a href="/privacy">Privacy Policy</a> · <a href="/cookie">Cookie Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Fade-in animation on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

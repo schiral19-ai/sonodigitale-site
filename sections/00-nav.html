@@ -8,7 +8,7 @@
       <a href="/faq">FAQ</a>
       <a href="/contatti" class="nav-cta">Contatti</a>
     </div>
-    <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <button class="nav-hamburger" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true' ? 'false' : 'true'); document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>

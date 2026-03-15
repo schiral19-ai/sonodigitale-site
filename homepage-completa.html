@@ -47,18 +47,22 @@ a { text-decoration: none; color: inherit; }
 .nav-links a:hover { color: var(--orange); }
 .nav-cta { font-size: 14px; font-weight: 700; padding: 8px 20px; border-radius: 6px; background: var(--orange); color: var(--white); transition: background 0.2s; }
 .nav-cta:hover { background: var(--orange-dark); }
-.nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 10px; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--gray-800); margin: 5px 0; transition: 0.3s; }
 
 /* BUTTONS */
-.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.25s ease; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-body); font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.25s ease; min-height: 48px; }
 .btn-primary { background: var(--orange); color: var(--white); }
 .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(252,126,21,0.3); }
 .btn-secondary { background: transparent; color: var(--gray-800); border: 1.5px solid var(--gray-300); }
 .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
 .btn-outline-orange { background: transparent; color: var(--orange); border: 1.5px solid var(--orange); }
 .btn-outline-orange:hover { background: var(--orange); color: var(--white); }
-.btn-sm { padding: 10px 20px; font-size: 13px; }
+.btn-primary-dark { background: var(--orange); color: var(--white); }
+.btn-primary-dark:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(252,126,21,0.3); }
+.btn-secondary-dark { background: transparent; color: rgba(255,255,255,0.85); border: 1.5px solid rgba(255,255,255,0.35); }
+.btn-secondary-dark:hover { border-color: var(--orange); color: var(--orange); }
+.btn-sm { padding: 10px 20px; font-size: 14px; min-height: 40px; }
 
 /* SECTION TITLES */
 .section-tag { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
@@ -75,7 +79,7 @@ a { text-decoration: none; color: inherit; }
 .hero h1 { font-family: var(--font-heading); font-size: 42px; font-weight: 700; line-height: 1.15; color: var(--gray-900); margin-bottom: 16px; }
 .hero h1 span { color: var(--orange); }
 .hero-text { font-size: 17px; color: var(--gray-600); line-height: 1.7; margin-bottom: 16px; max-width: 640px; }
-.hero-creds { font-size: 14px; color: var(--gray-500); margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.hero-creds { font-size: 14px; color: var(--gray-700); margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
 .hero-creds span { white-space: nowrap; }
 .hero-creds span::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); margin-right: 8px; vertical-align: middle; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -85,9 +89,9 @@ a { text-decoration: none; color: inherit; }
 .persona-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
 .persona-card { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: 12px; padding: 28px 20px; text-align: center; transition: all 0.3s ease; cursor: pointer; }
 .persona-card:hover { border-color: var(--orange); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-.persona-icon { font-size: 32px; margin-bottom: 12px; }
+.persona-icon { margin-bottom: 12px; color: var(--orange); display: flex; justify-content: center; }
 .persona-card h3 { font-family: var(--font-heading); font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--gray-900); }
-.persona-card p { font-size: 14px; color: var(--gray-600); line-height: 1.5; margin-bottom: 16px; }
+.persona-card p { font-size: 16px; color: var(--gray-700); line-height: 1.65; margin-bottom: 16px; }
 .persona-card .card-link { font-size: 13px; font-weight: 700; color: var(--orange); display: inline-flex; align-items: center; gap: 4px; }
 .persona-card .card-link::after { content: '→'; transition: transform 0.2s; }
 .persona-card:hover .card-link::after { transform: translateX(4px); }
@@ -112,14 +116,16 @@ a { text-decoration: none; color: inherit; }
 .step-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 24px 20px; text-align: center; }
 .step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--orange); color: var(--white); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 18px; font-weight: 700; margin-bottom: 12px; }
 .step-card h4 { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-.step-card p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.5; }
+.step-card p { font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.65; }
 .funds-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
 .fund-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; text-align: center; }
 .fund-card h5 { font-family: var(--font-heading); font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-.fund-card p { font-size: 12px; color: rgba(255,255,255,0.6); }
-.urgency-bar { background: rgba(252,126,21,0.15); border: 1px solid rgba(252,126,21,0.3); border-radius: 8px; padding: 14px 20px; margin-bottom: 28px; }
-.urgency-bar strong { color: var(--orange); font-size: 14px; }
-.urgency-bar span { color: rgba(255,255,255,0.7); font-size: 13px; margin-left: 8px; }
+.fund-card p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+.urgency-bar { background: rgba(252,126,21,0.12); border: 1px solid rgba(252,126,21,0.3); border-radius: 8px; padding: 14px 20px; margin-bottom: 28px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.urgency-bar strong { color: var(--orange-dark); font-size: 14px; }
+.urgency-bar span { color: var(--gray-700); font-size: 14px; }
+.urgency-bar-dark strong { color: var(--orange); }
+.urgency-bar-dark span { color: rgba(255,255,255,0.75); }
 .formazione .btn-primary { background: var(--orange); }
 .formazione .btn-secondary { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3); }
 .formazione .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
@@ -129,12 +135,12 @@ a { text-decoration: none; color: inherit; }
 .aggregate-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
 .agg-score { font-family: var(--font-display); font-size: 48px; color: var(--orange); line-height: 1; }
 .agg-stars { color: var(--orange); font-size: 18px; letter-spacing: 2px; }
-.agg-text { font-size: 14px; color: var(--gray-600); }
+.agg-count { font-size: 14px; color: var(--gray-600); }
 .agg-source { font-size: 12px; color: var(--gray-500); }
 .reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .review-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; }
 .review-stars { color: var(--orange); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
-.review-quote { font-size: 14px; color: var(--gray-700); line-height: 1.6; font-style: italic; margin-bottom: 16px; }
+.review-quote { font-size: 16px; color: var(--gray-700); line-height: 1.65; font-style: italic; margin-bottom: 16px; }
 .review-author { display: flex; align-items: center; gap: 10px; }
 .review-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 14px; font-weight: 700; flex-shrink: 0; }
 .review-name { font-size: 13px; font-weight: 700; color: var(--gray-800); }
@@ -147,7 +153,7 @@ a { text-decoration: none; color: inherit; }
 .faq-question { font-family: var(--font-heading); font-size: 17px; font-weight: 700; color: var(--gray-900); padding: 20px 0 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
 .faq-question::after { content: '+'; font-size: 22px; color: var(--orange); font-weight: 400; transition: transform 0.2s; flex-shrink: 0; margin-left: 16px; }
 .faq-item.open .faq-question::after { content: '−'; }
-.faq-answer { font-size: 15px; color: var(--gray-600); line-height: 1.7; padding: 0 0 20px; }
+.faq-answer { font-size: 16px; color: var(--gray-700); line-height: 1.7; padding: 0 0 20px; max-width: 640px; }
 .faq-link { margin-top: 8px; }
 .faq-link a { font-size: 15px; font-weight: 700; color: var(--orange); display: inline-flex; align-items: center; gap: 6px; }
 .faq-link a:hover { text-decoration: underline; }
@@ -184,28 +190,36 @@ a { text-decoration: none; color: inherit; }
 .footer-bottom { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.4); }
 .footer-bottom a { color: rgba(255,255,255,0.4); }
 .footer-bottom a:hover { color: var(--orange); }
+.footer-collab-label { display: block; margin-top: 8px; font-size: 13px; color: rgba(255,255,255,0.50); line-height: 1.6; }
+.footer-collab-name  { display: block; font-size: 14px; color: var(--white); font-weight: 700; line-height: 1.6; }
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
   :root { --section-padding: var(--section-padding-mobile); }
   .nav-links { display: none; }
-  .nav-hamburger { display: block; }
+  .nav-hamburger { display: flex; }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--white); padding: 16px 24px; border-bottom: 1px solid var(--gray-200); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .nav-links.open a { padding: 12px 0; font-size: 16px; min-height: 44px; display: flex; align-items: center; }
   .hero-inner { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
   .hero h1 { font-size: 32px; }
-  .hero-text { font-size: 15px; }
-  .hero-creds { justify-content: center; }
+  .hero-text { font-size: 16px; }
+  .hero-creds { justify-content: center; font-size: 15px; }
   .hero-ctas { justify-content: center; }
   .persona-cards { grid-template-columns: 1fr; }
+  .persona-card p { font-size: 16px; line-height: 1.65; }
   .stats-row { grid-template-columns: 1fr; }
   .steps-row { grid-template-columns: 1fr; }
+  .step-card p { font-size: 16px; line-height: 1.65; }
   .funds-row { grid-template-columns: 1fr; }
+  .fund-card p { font-size: 15px; }
   .reviews-grid { grid-template-columns: 1fr; }
+  .review-quote { font-size: 16px; }
   .cta-box { padding: 32px 20px; }
   .cta-options { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
   .footer-bottom { flex-direction: column; gap: 4px; }
   .section-title { font-size: 28px; }
+  .faq-answer { font-size: 16px; }
 }
 @media (max-width: 480px) {
   .hero h1 { font-size: 28px; }
@@ -218,6 +232,10 @@ a { text-decoration: none; color: inherit; }
 @media (prefers-reduced-motion: no-preference) {
   .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .faq-answer { transition: none; }
 }
 </style>
 
@@ -354,7 +372,7 @@ a { text-decoration: none; color: inherit; }
       <a href="/faq">FAQ</a>
       <a href="/contatti" class="nav-cta">Contatti</a>
     </div>
-    <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <button class="nav-hamburger" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true' ? 'false' : 'true'); document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -365,7 +383,7 @@ a { text-decoration: none; color: inherit; }
   <div class="container">
     <div class="hero-inner fade-in">
       <div class="hero-photo">
-        <!-- Sostituisci con la tua foto: <img src="foto-roberto.jpg" alt="Roberto Schiraldi - Formatore AI"> -->
+        <!-- Sostituisci con: <img src="foto-roberto.jpg" alt="Roberto Schiraldi — Formatore AI accreditato Regione Lombardia" width="120" height="120" loading="eager" fetchpriority="high"> -->
         <div class="hero-photo-placeholder">Foto Roberto</div>
       </div>
       <div class="hero-content">
@@ -392,22 +410,28 @@ a { text-decoration: none; color: inherit; }
     <div class="fade-in">
       <div class="persona-cards">
         <a href="/formazione#aziende" class="persona-card">
-          <div class="persona-icon">🏢</div>
+          <div class="persona-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5"/></svg>
+          </div>
           <h3>Hai un'azienda?</h3>
           <p>Forma il tuo team sull'AI con percorsi finanziati fino al 100%. Fondi interprofessionali, voucher regionali e bandi dedicati alle imprese lombarde.</p>
-          <span class="card-link">Scopri le opportunità per la tua azienda</span>
+          <span class="card-link" aria-hidden="true">Scopri le opportunità per la tua azienda</span>
         </a>
         <a href="/formazione#professionisti" class="persona-card">
-          <div class="persona-icon">💼</div>
+          <div class="persona-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          </div>
           <h3>Sei un professionista?</h3>
           <p>Integra l'AI nel tuo lavoro quotidiano. Più produttività, meno tempo perso in attività ripetitive. Percorsi pratici pensati per chi lavora.</p>
-          <span class="card-link">Scopri i percorsi per professionisti</span>
+          <span class="card-link" aria-hidden="true">Scopri i percorsi per professionisti</span>
         </a>
         <a href="/formazione#gol" class="persona-card">
-          <div class="persona-icon">🎯</div>
+          <div class="persona-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2m0 14v2M3 12h2m14 0h2"/></svg>
+          </div>
           <h3>Cerchi lavoro?</h3>
           <p>Il Progetto GOL di Regione Lombardia ti offre un corso di Intelligenza Artificiale completamente gratuito. Competenze digitali spendibili subito nel mercato del lavoro.</p>
-          <span class="card-link">Scopri il corso gratuito</span>
+          <span class="card-link" aria-hidden="true">Scopri il corso gratuito</span>
         </a>
       </div>
     </div>
@@ -439,7 +463,7 @@ a { text-decoration: none; color: inherit; }
         <h3>Ma c'è una buona notizia.</h3>
         <p>Non devi farlo da solo, e non deve costarti una fortuna. In Lombardia esistono percorsi di formazione AI finanziati fino al 100% — per aziende, professionisti e persone in cerca di lavoro. Il primo passo è capire quale opportunità fa per te.</p>
       </div>
-      <a href="/formazione" class="btn btn-primary">Scopri le opportunità di formazione</a>
+      <a href="/formazione" class="btn btn-secondary">Scopri le opportunità di formazione →</a>
     </div>
   </div>
 </section>
@@ -482,12 +506,12 @@ a { text-decoration: none; color: inherit; }
           <p>Voucher e contributi Regione Lombardia per PMI e professionisti</p>
         </div>
       </div>
-      <div class="urgency-bar">
+      <div class="urgency-bar urgency-bar-dark">
         <strong>Posti limitati per ogni edizione</strong>
         <span>— Le classi sono a numero chiuso per garantire qualità. Contattami per verificare la disponibilità.</span>
       </div>
-      <a href="/contatti" class="btn btn-primary">Verifica le opportunità per te</a>
-      <a href="/formazione" class="btn btn-secondary">Scopri il programma completo</a>
+      <a href="/contatti" class="btn btn-primary-dark">Verifica le opportunità per te</a>
+      <a href="/formazione" class="btn btn-secondary-dark">Scopri il programma completo →</a>
     </div>
   </div>
 </section>
@@ -496,12 +520,13 @@ a { text-decoration: none; color: inherit; }
 <section class="testimonianze">
   <div class="container">
     <div class="fade-in">
+      <span class="section-tag">Testimonianze</span>
       <h2 class="section-title">Cosa dice chi ha partecipato</h2>
       <div class="aggregate-bar">
         <div class="agg-score">4,8</div>
         <div>
           <div class="agg-stars">★★★★★</div>
-          <div class="agg-text">49 recensioni su Google</div>
+          <div class="agg-count">49 recensioni su Google</div>
           <div class="agg-source">Atoma Formazione — ente accreditato Regione Lombardia</div>
         </div>
       </div>
@@ -590,18 +615,18 @@ a { text-decoration: none; color: inherit; }
         <p class="section-subtitle">Che tu stia cercando formazione per il tuo team, un percorso per te o un primo orientamento, il prossimo passo è semplice.</p>
         <div class="cta-options">
           <div class="cta-option featured">
-            <div class="cta-option-tag">Scopri</div>
-            <h3>Scarica la guida gratuita</h3>
-            <p>10 modi concreti per usare l'AI nella tua attività — con esempi pratici, strumenti consigliati e primi passi da fare subito. Gratis, nella tua email.</p>
-            <a href="#" class="btn btn-primary btn-sm">Scarica la guida →</a>
-            <div class="note">Ricevi anche aggiornamenti su bandi e opportunità di formazione</div>
-          </div>
-          <div class="cta-option">
             <div class="cta-option-tag">Agisci</div>
             <h3>Prenota una call gratuita</h3>
             <p>30 minuti insieme per capire la tua situazione, individuare le opportunità di finanziamento e definire il percorso più adatto a te.</p>
-            <a href="/contatti" class="btn btn-outline-orange btn-sm">Prenota la call →</a>
+            <a href="/contatti" class="btn btn-primary btn-sm">Prenota la call →</a>
             <div class="note">Senza impegno · Online o telefono · Rispondo entro 24h</div>
+          </div>
+          <div class="cta-option">
+            <div class="cta-option-tag">Scopri</div>
+            <h3>Scarica la guida gratuita</h3>
+            <p>10 modi concreti per usare l'AI nella tua attività — con esempi pratici, strumenti consigliati e primi passi da fare subito. Gratis, nella tua email.</p>
+            <a href="/contatti?interesse=guida" class="btn btn-outline-orange btn-sm">Scarica la guida →</a>
+            <div class="note">Ricevi anche aggiornamenti su bandi e opportunità di formazione</div>
           </div>
         </div>
       </div>
@@ -619,8 +644,8 @@ a { text-decoration: none; color: inherit; }
         <span>Roberto Schiraldi</span>
         <span>Formatore AI accreditato</span>
         <span>Regione Lombardia</span>
-        <span style="margin-top:8px;display:block">In collaborazione con</span>
-        <span style="color:var(--white);font-weight:700">Atoma SRL — Milano</span>
+        <span class="footer-collab-label">In collaborazione con</span>
+        <span class="footer-collab-name">Atoma SRL — Milano</span>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Pagine</div>

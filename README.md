@@ -47,15 +47,15 @@ sonodigitale-site/
 | **Tema attivo** | GeneratePress (free) — sostituito Astra per eliminare conflitti CSS |
 | **CSS globale** | `docs/wordpress-customizer.css` → Aspetto → Personalizza → CSS aggiuntivo |
 | **Layout pagine** | Senza barre laterali + Disattiva titolo del contenuto |
+| **Schema JSON-LD** | Nell'`<head>` tramite plugin o header scripts (Aspetto → Personalizza → Avanzato → Header Scripts) |
 
 ---
 
 ## Implementazione in WordPress/Gutenberg
 
 ### Passo 1: CSS
-Inserire il contenuto di `assets/css/style.css` in:
-- Copiare il contenuto di `docs/wordpress-customizer.css` in:
-  **Aspetto → Personalizza → CSS aggiuntivo**
+Copiare il contenuto di `docs/wordpress-customizer.css` in:
+**Aspetto → Personalizza → CSS aggiuntivo**
 
 ### Passo 2: Schema Markup JSON-LD
 Inserire il contenuto di `assets/schema-markup.json` nell'`<head>` del sito:
@@ -127,12 +127,12 @@ Inserire `assets/js/main.js` nel footer del sito:
 - **FAQPage:** 3 domande + risposte strutturate
 - **AggregateRating:** 4.8/5 su 49 recensioni (Atoma Google)
 
-### 5 Golden Query GEO
-1. "Formazione AI finanziata Lombardia"
-2. "Consulente AI per PMI Lombardia"
-3. "Corso AI gratuito inoccupati GOL"
-4. "Come usare AI in una piccola impresa"
-5. "Chi fa formazione intelligenza artificiale in Lombardia"
+### 5 Golden Query GEO → pagina dedicata
+1. "Formazione AI finanziata PMI Lombardia" → `/formazione-aziende`
+2. "Corso AI gratuito inoccupati GOL" → `/progetto-gol`
+3. "AI per professionisti Lombardia" → `/formazione-professionisti`
+4. "Consulente AI PMI Lombardia" → `/formazione-aziende` + `/chi-sono`
+5. "Chi fa formazione AI in Lombardia" → Homepage + `/chi-sono`
 
 ---
 
@@ -146,7 +146,7 @@ Deve essere IDENTICO su sito, Google Business Profile, LinkedIn e directory:
 ---
 
 ## Numeri verificabili (aggiornare trimestralmente)
-- **70+ persone formate sull'AI** (50 corsisti GOL in 10 edizioni + 20 professionisti/aziende)
+- **70+ persone formate sull'AI** (50 GOL + 20 professionisti/aziende)
 - **10 edizioni corso erogate** (da giugno 2025)
 - **4.8/5** rating Google Atoma Formazione (49 recensioni)
 - Ultimo aggiornamento: marzo 2026
@@ -163,26 +163,62 @@ Deve essere IDENTICO su sito, Google Business Profile, LinkedIn e directory:
 - [ ] Testare schema markup con Google Rich Results Test
 - [ ] Creare e ottimizzare Google Business Profile
 - [ ] Implementare cookie banner GDPR
-- [ ] Creare pagine fase 1: Formazione, Chi Sono, FAQ, Contatti
+- [ ] Creare pagine fase 1: /formazione-aziende, /formazione-professionisti, /progetto-gol, /chi-sono, /contatti
 
 ---
 
-## Mappa sito completa
+## Mappa sito v5 — definitiva (marzo 2026)
 
-### Fase 1 (lancio)
-- Homepage ← **QUESTO FILE**
-- /formazione (3 sezioni: aziende, professionisti, GOL)
-- /chi-sono (storia + E-E-A-T + Atoma)
-- /contatti (form + LatePoint + NAP)
-- /faq (20-30 domande strutturate per GEO)
+### Fase 1 — Lancio (6 pagine)
 
-### Fase 2 (mese 2)
-- /servizi (consulenza AI)
-- /testimonianze (pagina dedicata)
-- /blog (articoli SEO + cluster tematici)
+| Pagina | URL | Contenuto | Schema markup |
+|--------|-----|-----------|---------------|
+| Homepage | `sonodigitale.it` | Hero + smistamento 3 personas + 1 FAQ trasversale + CTA | Person + Organization + LocalBusiness |
+| Formazione Aziende | `/formazione-aziende` | Fondi + ROI + corso angolato PMI + FAQ aziende + opzione a pagamento | Service + FAQPage |
+| Formazione Professionisti | `/formazione-professionisti` | Produttività + AI pratica + FAQ professionisti + opzione a pagamento | Service + FAQPage |
+| Progetto GOL | `/progetto-gol` | Corso gratuito 100 ore + programma 4 settimane + come accedere + FAQ inoccupati | Course + HowTo + FAQPage |
+| Chi Sono | `/chi-sono` | Storia personale + Atoma SRL + credenziali + E-E-A-T | Person |
+| Contatti | `/contatti` | Form + LatePoint + NAP coerente | LocalBusiness |
 
-### Fase 3 (mese 3+)
-- /video-corsi (catalogo + acquisto)
+### Fase 2 — Mese 2
+- `/servizi` (consulenza AI)
+- `/testimonianze` (pagina dedicata)
+- `/blog` (articoli SEO)
+
+### Fase 3 — Mese 3+
+- `/video-corsi` (catalogo + acquisto)
+
+---
+
+## Navigazione (dropdown)
+
+```
+SONODIGITALE | Formazione ▾ | Chi sono | Contatti
+                  ├── Per le aziende       → /formazione-aziende
+                  ├── Per i professionisti  → /formazione-professionisti
+                  └── Progetto GOL         → /progetto-gol
+```
+
+---
+
+## Modifiche homepage rispetto alla v4
+
+- **Smistamento:** link ora puntano a 3 pagine separate (non più anchor `#aziende` ecc.)
+  - "Hai un'azienda?" → `/formazione-aziende`
+  - "Sei un professionista?" → `/formazione-professionisti`
+  - "Cerchi lavoro?" → `/progetto-gol`
+- **Sezione FAQ:** ridotta da 3 domande a 1 sola FAQ trasversale ("Cos'è la formazione AI finanziata in Lombardia?")
+- **Navigazione:** aggiungere dropdown "Formazione" con 3 sotto-voci
+- **Pagina FAQ dedicata:** ELIMINATA — FAQ distribuite nelle pagine persona
+
+---
+
+## FAQ distribuite (non più pagina unica)
+
+Ogni pagina formazione ha le sue FAQ specifiche per quella buyer persona:
+- `/formazione-aziende` → FAQ su fondi interprofessionali, voucher, ROI, tempi
+- `/formazione-professionisti` → FAQ su compatibilità con lavoro, competenze, certificato
+- `/progetto-gol` → FAQ su requisiti CPI, gratuità, programma, attestato
 
 ---
 

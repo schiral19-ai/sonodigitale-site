@@ -3,10 +3,10 @@
 ## Progetto
 Sito web per **SONODIGITALE** di Roberto Schiraldi — Formazione e consulenza AI in Lombardia.
 
-**Brand:** SONODIGITALE  
-**Dominio:** sonodigitale.it  
-**Piattaforma:** WordPress 6.9.1 + Astra + Gutenberg  
-**Hosting:** IONOS  
+**Brand:** SONODIGITALE
+**Dominio:** sonodigitale.it
+**Piattaforma:** WordPress 6.9.1 + GeneratePress + Gutenberg
+**Hosting:** IONOS
 
 ---
 
@@ -17,12 +17,13 @@ sonodigitale-site/
 ├── homepage-completa.html      # Homepage completa in un unico file (riferimento)
 ├── assets/
 │   ├── css/
-│   │   └── style.css           # CSS completo (va nell'header del tema WordPress)
+│   │   └── style.css           # CSS completo (riferimento — vedi docs/wordpress-customizer.css)
 │   ├── js/
 │   │   └── main.js             # JavaScript (fade-in animations)
 │   └── schema-markup.json      # Schema JSON-LD (va nell'<head> di ogni pagina)
 ├── sections/                   # Sezioni HTML separate per Gutenberg
-│   ├── 00-nav.html             # Navigazione (gestita dal tema Astra)
+│   ├── homepage-body.html      # Body completo — per blocco HTML Gutenberg (pagina intera)
+│   ├── 00-nav.html             # Navigazione (gestita dal tema)
 │   ├── 01-hero.html            # Hero + identità + CTA
 │   ├── 02-smistamento.html     # 3 card personas (aziende/professionisti/inoccupati)
 │   ├── 03-dati.html            # Dati mercato AI Italia (Osservatorio PoliMI 2025)
@@ -30,11 +31,22 @@ sonodigitale-site/
 │   ├── 05-testimonianze.html   # 4 recensioni reali Google Atoma (4.8/5)
 │   ├── 06-faq.html             # FAQ preview (3 domande) + link pagina completa
 │   ├── 07-cta-finale.html      # CTA finale — lead magnet + call conoscitiva
-│   └── 08-footer.html          # Footer (gestito dal tema Astra)
+│   └── 08-footer.html          # Footer (gestito dal tema)
 ├── docs/
+│   ├── wordpress-customizer.css                 # CSS da incollare nel Customizer WP
 │   └── SONODIGITALE_Homepage_Specifica_v4.docx  # Specifica completa
 └── README.md
 ```
+
+---
+
+## Configurazione WordPress
+
+| Impostazione | Valore |
+|---|---|
+| **Tema attivo** | GeneratePress (free) — sostituito Astra per eliminare conflitti CSS |
+| **CSS globale** | `docs/wordpress-customizer.css` → Aspetto → Personalizza → CSS aggiuntivo |
+| **Layout pagine** | Senza barre laterali + Disattiva titolo del contenuto |
 
 ---
 
@@ -42,12 +54,12 @@ sonodigitale-site/
 
 ### Passo 1: CSS
 Inserire il contenuto di `assets/css/style.css` in:
-- **Astra** → Aspetto → Personalizza → CSS aggiuntivo
-- Oppure in un plugin come "Simple Custom CSS and JS"
+- Copiare il contenuto di `docs/wordpress-customizer.css` in:
+  **Aspetto → Personalizza → CSS aggiuntivo**
 
 ### Passo 2: Schema Markup JSON-LD
 Inserire il contenuto di `assets/schema-markup.json` nell'`<head>` del sito:
-- **Astra** → Aspetto → Personalizza → Avanzato → Header Scripts
+- **GeneratePress** → Aspetto → Personalizza → Avanzato → Header Scripts
 - Avvolgere in: `<script type="application/ld+json">` ... `</script>`
 
 ### Passo 3: Font Google
@@ -64,11 +76,11 @@ Per ogni file in `sections/` (da 01 a 07):
 2. Incolla il contenuto del file corrispondente
 3. Ripeti per ogni sezione nell'ordine
 
-**Nota:** La navigazione (00-nav.html) e il footer (08-footer.html) sono normalmente gestiti dal tema Astra, non vanno nel contenuto della pagina.
+**Nota:** La navigazione (00-nav.html) e il footer (08-footer.html) sono normalmente gestiti dal tema, non vanno nel contenuto della pagina.
 
 ### Passo 5: JavaScript
 Inserire `assets/js/main.js` nel footer del sito:
-- **Astra** → Aspetto → Personalizza → Avanzato → Footer Scripts
+- **GeneratePress** → Aspetto → Personalizza → Avanzato → Footer Scripts
 - Avvolgere in: `<script>` ... `</script>`
 
 ---

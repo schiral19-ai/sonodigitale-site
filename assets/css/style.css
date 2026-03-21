@@ -115,6 +115,9 @@ a { text-decoration: none; color: inherit; }
 .urgency-bar span { color: var(--gray-700); font-size: 14px; }
 .urgency-bar-dark strong { color: var(--orange); }
 .urgency-bar-dark span { color: rgba(255,255,255,0.75); }
+.formazione .btn-primary { background: var(--orange); }
+.formazione .btn-secondary { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3); }
+.formazione .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
 
 /* ==================== TESTIMONIANZE ==================== */
 .testimonianze { padding: var(--section-padding); background: var(--gray-50); }
@@ -157,9 +160,6 @@ a { text-decoration: none; color: inherit; }
 .cta-option p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 16px; }
 .cta-option .note { font-size: 12px; color: var(--gray-500); margin-top: 10px; }
 
-.footer-collab-label { display: block; margin-top: 8px; font-size: 13px; color: rgba(255,255,255,0.50); line-height: 1.6; }
-.footer-collab-name  { display: block; font-size: 14px; color: var(--white); font-weight: 700; line-height: 1.6; }
-
 /* ==================== FOOTER ==================== */
 .footer { background: var(--gray-900); color: rgba(255,255,255,0.8); padding: 60px 0 30px; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 32px; margin-bottom: 40px; }
@@ -179,6 +179,8 @@ a { text-decoration: none; color: inherit; }
 .footer-bottom { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.4); }
 .footer-bottom a { color: rgba(255,255,255,0.4); }
 .footer-bottom a:hover { color: var(--orange); }
+.footer-collab-label { display: block; margin-top: 8px; font-size: 13px; color: rgba(255,255,255,0.50); line-height: 1.6; }
+.footer-collab-name  { display: block; font-size: 14px; color: var(--white); font-weight: 700; line-height: 1.6; }
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
@@ -209,9 +211,7 @@ a { text-decoration: none; color: inherit; }
   .faq-answer { font-size: 16px; }
 }
 @media (max-width: 480px) {
-  .hero h1 { font-size: 31px; }
-  .hero-text { font-size: 17px; line-height: 1.65; }
-  .hero-creds { font-size: 15px; line-height: 1.5; }
+  .hero h1 { font-size: 28px; }
   .hero-photo { width: 96px; height: 96px; }
   .footer-grid { grid-template-columns: 1fr; }
   .btn { width: 100%; justify-content: center; }

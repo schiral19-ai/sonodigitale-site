@@ -28,9 +28,9 @@ article.post {
   box-shadow:    none !important;
   border:        none !important;
   border-radius: 0 !important;
-  background:    transparent !important;
+  /* background NON resettato qui — sovrascrive i background scuri delle sezioni */
 }
-.wp-block-html { padding: 0 !important; margin: 0 !important; }
+.wp-block-html { padding: 0 !important; margin: 0 !important; background: transparent !important; }
 
 /* Fix specifico post homepage (ID 1347) */
 article.post-1347 {

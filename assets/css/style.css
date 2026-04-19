@@ -362,3 +362,38 @@ a { text-decoration: none; color: inherit; }
   .fade-in { opacity: 1; transform: none; transition: none; }
   .faq-answer { transition: none; }
 }
+/* Nascondi header e footer GP solo su formazione-aziende */
+.page-id-1410 .site-header,
+.page-id-1410 .site-footer,
+.page-id-1410 .widget-area {
+  display: none !important;
+}
+
+.page-id-1410 .site-main {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.page-id-1410 .entry-title,
+.page-id-1410 .page-header {
+  display: none !important;
+}
+.page-id-1410 .widget-area { display: none !important; }
+.page-id-1410 .content-area { width: 100% !important; float: none !important; }
+.page-id-1410 .entry-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.page-id-1410 article {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.step-num {
+  color: var(--white) !important;
+}
+.page-id-1425 .site-header { display: none !important; }
+.page-id-1425 .site-footer { display: none !important; }
+.page-id-1425 .widget-area { display: none !important; }
+.page-id-1425 .entry-title { display: none !important; }
+.page-id-1425 .site-main { padding: 0 !important; margin: 0 !important; }
+.page-id-1425 .content-area { width: 100% !important; float: none !important; }

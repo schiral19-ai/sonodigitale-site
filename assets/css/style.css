@@ -397,3 +397,10 @@ a { text-decoration: none; color: inherit; }
 .page-id-1425 .entry-title { display: none !important; }
 .page-id-1425 .site-main { padding: 0 !important; margin: 0 !important; }
 .page-id-1425 .content-area { width: 100% !important; float: none !important; }
+/* Progetto GOL — page-id-1430 */
+.page-id-1430 .site-header { display: none !important; }
+.page-id-1430 .site-footer { display: none !important; }
+.page-id-1430 .widget-area { display: none !important; }
+.page-id-1430 .entry-title { display: none !important; }
+.page-id-1430 .site-main { padding: 0 !important; margin: 0 !important; }
+.page-id-1430 .content-area { width: 100% !important; float: none !important; }

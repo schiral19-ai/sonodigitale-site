@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corso AI Gratuito Lombardia | Progetto GOL | SONODIGITALE</title>
+  <meta name="description" content="Il corso di Intelligenza Artificiale gratuito per chi cerca lavoro in Lombardia. 100 ore, Progetto GOL Regione Lombardia. Nessuna esperienza richiesta. Iscriviti ora.">
+  <link rel="canonical" href="https://sonodigitale.it/progetto-gol">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Lato:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Course",
+        "name": "Corso AI — Intelligenza Artificiale per la Produttività",
+        "description": "Corso di Intelligenza Artificiale gratuito per inoccupati in Lombardia, erogato nell'ambito del Progetto GOL di Regione Lombardia. 100 ore di formazione pratica su ChatGPT, Gemini, Claude e altri strumenti AI.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Atoma SRL",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Milano",
+            "addressCountry": "IT"
+          }
+        },
+        "instructor": {
+          "@type": "Person",
+          "name": "Roberto Schiraldi",
+          "url": "https://sonodigitale.it/chi-sono"
+        },
+        "courseMode": "onsite",
+        "timeRequired": "PT100H",
+        "educationalLevel": "Beginner",
+        "inLanguage": "it",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "areaServed": "Lombardia"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Il corso Progetto GOL è davvero gratuito?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì. Zero euro. Nessun costo nascosto. Nessuna sorpresa. Il corso è finanziato al 100% dal Progetto GOL di Regione Lombardia."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Devo essere iscritto al Centro per l'Impiego per partecipare al Progetto GOL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì, l'iscrizione al Centro per l'Impiego è un requisito del Progetto GOL. Se non hai ancora fatto l'iscrizione, ti spieghiamo come fare durante il primo contatto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ho più di 50 anni — posso partecipare al corso AI gratuito?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Assolutamente sì. Tra i partecipanti delle edizioni precedenti molti avevano più di 50 anni e hanno completato il percorso con successo. L'età non è un ostacolo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Serve esperienza tecnica per partecipare al corso AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Il corso richiede una conoscenza base del computer — saper navigare su internet, aprire un browser e usare una email. Non servono competenze avanzate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Il corso Progetto GOL è online o in presenza?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La modalità viene definita insieme prima dell'inizio del percorso, in base alle esigenze e all'edizione disponibile."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Che attestato si riceve al termine del corso AI Progetto GOL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Al termine del percorso ricevi un attestato di competenza riconosciuto, rilasciato da Atoma SRL ente accreditato Regione Lombardia."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --orange:       #FC7E15;
+      --orange-dark:  #D96A0B;
+      --orange-light: #FFF3E6;
+      --white:        #FFFFFF;
+      --gray-900:     #212121;
+      --gray-800:     #424242;
+      --gray-700:     #616161;
+      --gray-600:     #757575;
+      --gray-500:     #9E9E9E;
+      --gray-300:     #E0E0E0;
+      --gray-200:     #EEEEEE;
+      --gray-100:     #F5F5F5;
+      --gray-50:      #FAFAFA;
+
+      --font-display: 'League Gothic', sans-serif;
+      --font-heading: 'Lato', sans-serif;
+      --font-body:    'Roboto', sans-serif;
+
+      --max-width:    1140px;
+      --space-sm:     16px;
+      --space-md:     24px;
+      --space-lg:     32px;
+      --space-xl:     48px;
+      --space-2xl:    64px;
+      --space-3xl:    88px;
+
+      --radius-md:    8px;
+      --radius-lg:    12px;
+      --radius-xl:    16px;
+
+      --shadow-sm:     0 1px 4px rgba(0,0,0,0.06);
+      --shadow-md:     0 4px 16px rgba(0,0,0,0.08);
+      --shadow-orange: 0 4px 20px rgba(252,126,21,0.25);
+
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.25s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--gray-900);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); }
+    @media (max-width: 768px) { .container { padding: 0 20px; } }
+
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .fade-in { opacity: 1; transform: none; transition: none; } }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font-heading); font-size: 16px; font-weight: 700;
+      padding: 14px 28px; border-radius: var(--radius-md); border: none;
+      cursor: pointer; transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      min-height: 44px; text-decoration: none; white-space: nowrap;
+    }
+    .btn-primary { background: var(--orange); color: var(--white); box-shadow: var(--shadow-orange); }
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: var(--gray-900); border: 1.5px solid var(--gray-300); }
+    .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-brand img { width: 160px; height: auto; }
+    .nav-links { display: flex; align-items: center; gap: var(--space-md); }
+    .nav-links a { font-family: var(--font-heading); font-size: 15px; font-weight: 700; color: var(--gray-800); transition: color var(--transition-fast); }
+    .nav-links a:hover { color: var(--orange); }
+    .nav-cta { background: var(--orange); color: var(--white) !important; padding: 10px 20px; border-radius: var(--radius-md); font-size: 15px; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; }
+    .nav-cta:hover { background: var(--orange-dark) !important; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-btn { font-family: var(--font-heading); font-size: 15px; font-weight: 700; color: var(--gray-800); background: none; border: none; cursor: pointer; padding: 6px 2px; min-height: 44px; transition: color var(--transition-fast); }
+    .nav-dropdown-btn:hover { color: var(--orange); }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-md); box-shadow: var(--shadow-md); min-width: 200px; padding: 6px 0; z-index: 200; }
+    .nav-dropdown.open .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 10px 16px; font-size: 14px; color: var(--gray-800); transition: background var(--transition-fast), color var(--transition-fast); }
+    .nav-dropdown-menu a:hover { background: var(--gray-100); color: var(--orange); }
+    .nav-dropdown-menu a[href="/progetto-gol"] { color: var(--orange); font-weight: 700; }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 10px; min-width: 44px; min-height: 44px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--gray-900); border-radius: 2px; }
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; }
+      .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-200); flex-direction: column; align-items: flex-start; padding: var(--space-md) 20px; gap: var(--space-sm); box-shadow: var(--shadow-md); z-index: 99; }
+      .nav-links.open { display: flex; }
+      .nav-dropdown-menu { position: static; box-shadow: none; border: none; background: var(--gray-100); border-radius: var(--radius-md); padding: 4px 0; margin-top: 4px; }
+      .nav-dropdown.open .nav-dropdown-menu { display: block; }
+    }
+
+    /* HELPERS */
+    .section-tag { display: inline-block; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange); margin-bottom: var(--space-sm); }
+    .section-title { font-family: var(--font-heading); font-size: 36px; font-weight: 700; line-height: 1.3; color: var(--gray-900); margin-bottom: var(--space-md); }
+    @media (max-width: 768px) { .section-title { font-size: 26px; } }
+
+    /* SEZIONE 1 — HERO */
+    .hero-gol { padding: var(--space-3xl) 0; background: var(--white); }
+    .hero-gol h1 { font-family: var(--font-heading); font-size: 44px; font-weight: 700; line-height: 1.2; color: var(--gray-900); margin-bottom: var(--space-md); }
+    .hero-gol h1 span { color: var(--orange); }
+    .free-badge { display: inline-block; font-size: 14px; font-weight: 700; padding: 4px 14px; border-radius: 99px; background: var(--orange); color: var(--white); margin-left: 12px; vertical-align: middle; }
+    .hero-lead { font-size: 18px; color: var(--gray-700); line-height: 1.7; max-width: 680px; margin-bottom: var(--space-xl); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); margin-bottom: var(--space-xl); }
+    .stat-card { text-align: center; padding: var(--space-lg) var(--space-md); background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); }
+    .stat-num { font-family: var(--font-display); font-size: 42px; color: var(--orange); line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-size: 14px; color: var(--gray-600); line-height: 1.4; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+    @media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) {
+      .hero-gol { padding: 56px 0; }
+      .hero-gol h1 { font-size: 28px; }
+      .hero-lead { font-size: 16px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-ctas { flex-direction: column; }
+    }
+
+    /* SEZIONE 2 — È PER ME */
+    .per-me { padding: var(--space-3xl) 0; background: var(--gray-50); }
+    .per-me-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-bottom: var(--space-lg); }
+    .per-me-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: var(--space-lg); }
+    .per-me-card .card-title { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: var(--space-sm); font-style: italic; }
+    .per-me-card p { font-size: 15px; color: var(--gray-700); line-height: 1.65; }
+    .paura-box { background: var(--orange-light); border-left: 4px solid var(--orange); padding: var(--space-lg) var(--space-xl); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+    .paura-box strong { font-family: var(--font-heading); font-size: 17px; color: var(--gray-900); display: block; margin-bottom: 8px; }
+    .paura-box p { font-size: 16px; color: var(--gray-700); line-height: 1.65; }
+    @media (max-width: 768px) {
+      .per-me { padding: 56px 0; }
+      .per-me-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SEZIONE 3 — COSA IMPARI */
+    .programma { padding: var(--space-3xl) 0; background: var(--white); }
+    .programma-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
+    .programma-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: var(--space-lg); }
+    .programma-card h4 { font-family: var(--font-heading); font-size: 17px; font-weight: 700; color: var(--gray-900); margin-bottom: var(--space-sm); }
+    .programma-card p { font-size: 15px; color: var(--gray-700); line-height: 1.65; }
+    @media (max-width: 768px) {
+      .programma { padding: 56px 0; }
+      .programma-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SEZIONE 4 — COME FUNZIONA */
+    .come-accedi { padding: var(--space-3xl) 0; background: var(--gray-50); }
+    .steps-list { display: flex; flex-direction: column; gap: 0; max-width: 720px; margin-top: var(--space-lg); }
+    .step-item { display: flex; gap: var(--space-lg); padding: var(--space-lg) 0; border-bottom: 1px solid var(--gray-200); align-items: flex-start; }
+    .step-item:last-child { border-bottom: none; }
+    .step-num { width: 44px; height: 44px; border-radius: 50%; background: var(--orange); color: var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 22px; flex-shrink: 0; }
+    .step-content h4 { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
+    .step-content p { font-size: 16px; color: var(--gray-700); line-height: 1.65; }
+    @media (max-width: 768px) { .come-accedi { padding: 56px 0; } }
+
+    /* SEZIONE 5 — TESTIMONIANZE */
+    .testi-gol { padding: var(--space-3xl) 0; background: var(--white); }
+    .testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); margin-top: var(--space-lg); }
+    .testi-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: var(--space-lg); }
+    .testi-quote { font-size: 16px; color: var(--gray-700); font-style: italic; line-height: 1.7; margin-bottom: var(--space-md); }
+    .testi-quote::before { content: '"'; color: var(--orange); font-size: 24px; font-style: normal; }
+    .testi-author { font-size: 14px; color: var(--gray-500); }
+    .testi-author strong { color: var(--gray-800); }
+    @media (max-width: 768px) {
+      .testi-gol { padding: 56px 0; }
+      .testi-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SEZIONE 6 — FAQ */
+    .faq-gol { padding: var(--space-3xl) 0; background: var(--gray-50); }
+    .faq-list { max-width: 760px; margin-top: var(--space-lg); }
+    .faq-item { border-bottom: 1px solid var(--gray-200); }
+    .faq-question { font-family: var(--font-heading); font-size: 17px; font-weight: 700; color: var(--gray-900); padding: var(--space-lg) 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); min-height: 44px; user-select: none; }
+    .faq-question::after { content: '+'; font-size: 22px; color: var(--orange); flex-shrink: 0; transition: transform var(--transition-base); }
+    .faq-item.open .faq-question::after { transform: rotate(45deg); }
+    .faq-answer { font-size: 16px; color: var(--gray-700); line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+    .faq-item.open .faq-answer { max-height: 400px; padding-bottom: var(--space-lg); }
+    .faq-question:hover { color: var(--orange); }
+    @media (max-width: 768px) { .faq-gol { padding: 56px 0; } }
+
+    /* SEZIONE 7 — FORM */
+    .form-gol { padding: var(--space-3xl) 0; background: var(--white); }
+    .form-box { background: var(--orange-light); border: 1.5px solid rgba(252,126,21,0.25); border-radius: var(--radius-xl); padding: var(--space-3xl) var(--space-2xl); max-width: 640px; margin: 0 auto; }
+    .form-box .section-title { text-align: center; }
+    .form-intro { font-size: 17px; color: var(--gray-700); line-height: 1.65; text-align: center; margin-bottom: var(--space-xl); }
+    .form-field {
+      width: 100%; padding: 14px 16px; border-radius: var(--radius-md);
+      border: 1.5px solid var(--gray-300); background: var(--white);
+      font-size: 16px; font-family: var(--font-body); color: var(--gray-900);
+      margin-bottom: var(--space-md); transition: border-color var(--transition-fast);
+      display: block;
+    }
+    .form-field:focus { outline: none; border-color: var(--orange); }
+    .form-field::placeholder { color: var(--gray-500); }
+    .form-submit {
+      width: 100%; padding: 16px; border-radius: var(--radius-md);
+      background: var(--orange); color: var(--white); border: none;
+      font-family: var(--font-heading); font-size: 17px; font-weight: 700;
+      cursor: pointer; transition: background var(--transition-fast), transform var(--transition-fast);
+      min-height: 54px;
+    }
+    .form-submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .form-submit:disabled { background: var(--gray-300); cursor: not-allowed; transform: none; }
+    .form-legal { font-size: 13px; color: var(--gray-600); text-align: center; margin-top: var(--space-md); line-height: 1.6; }
+    .form-legal a { color: var(--orange); text-decoration: underline; }
+    .form-success { display: none; text-align: center; padding: var(--space-xl); }
+    .form-success h3 { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--gray-900); margin-bottom: var(--space-sm); }
+    .form-success p { font-size: 16px; color: var(--gray-700); line-height: 1.65; }
+    .form-error { display: none; font-size: 14px; color: #D32F2F; margin-top: var(--space-sm); text-align: center; }
+    @media (max-width: 768px) {
+      .form-gol { padding: 56px 0; }
+      .form-box { padding: var(--space-xl) var(--space-lg); }
+    }
+
+    /* FOOTER */
+    .footer { background: var(--gray-900); color: var(--white); padding: var(--space-3xl) 0 var(--space-xl); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: var(--space-2xl); margin-bottom: var(--space-2xl); }
+    .footer-col { display: flex; flex-direction: column; gap: 8px; }
+    .footer-brand { font-family: var(--font-display); font-size: 28px; color: var(--white); letter-spacing: 0.01em; margin-bottom: 4px; }
+    .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-sm); }
+    .footer-col span { font-size: 14px; color: rgba(255,255,255,0.7); }
+    .footer-collab-label { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 4px; }
+    .footer-collab-name { font-size: 14px; color: var(--orange); font-weight: 700; }
+    .footer-col-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+    .footer-col a { font-size: 14px; color: rgba(255,255,255,0.75); transition: color var(--transition-fast); }
+    .footer-col a:hover, .footer-col a.highlight { color: var(--orange); }
+    .footer-newsletter { display: flex; gap: 8px; margin-top: 4px; }
+    .footer-newsletter input { flex: 1; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.07); color: var(--white); font-size: 14px; font-family: var(--font-body); }
+    .footer-newsletter input::placeholder { color: rgba(255,255,255,0.35); }
+    .footer-newsletter button { padding: 10px 16px; border-radius: var(--radius-md); background: var(--orange); color: var(--white); border: none; font-size: 14px; font-weight: 700; cursor: pointer; font-family: var(--font-heading); min-height: 44px; }
+    .footer-newsletter button:hover { background: var(--orange-dark); }
+    .footer-newsletter-note { font-size: 12px; color: rgba(255,255,255,0.35); }
+    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: var(--space-lg); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(255,255,255,0.4); flex-wrap: wrap; gap: var(--space-sm); }
+    .footer-bottom a { color: rgba(255,255,255,0.4); transition: color var(--transition-fast); }
+    .footer-bottom a:hover { color: var(--orange); }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-xl); } }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-brand">
+      <img src="https://sonodigitale-1n5xbp6q26.live-website.com/wp-content/uploads/2025/08/SONODIGITALE-1000X1000.png" alt="SONODIGITALE" width="160" height="40">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-dropdown" id="navDropdownFormazione">
+        <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false"
+          onclick="var d=document.getElementById('navDropdownFormazione'); d.classList.toggle('open'); this.setAttribute('aria-expanded', d.classList.contains('open') ? 'true' : 'false');">
+          Formazione ▾
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="/formazione-aziende">Per le aziende</a>
+          <a href="/formazione-professionisti">Per i professionisti</a>
+          <a href="/progetto-gol">Progetto GOL</a>
+        </div>
+      </div>
+      <a href="/chi-sono">Chi sono</a>
+      <a href="/contatti" class="nav-cta">Contatti</a>
+    </div>
+    <button class="nav-hamburger"
+      onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true' ? 'false' : 'true'); document.getElementById('navLinks').classList.toggle('open')"
+      aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- SEZIONE 1: HERO -->
+<section class="hero-gol">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-tag">Progetto GOL · Regione Lombardia</span>
+      <h1>Il corso di Intelligenza Artificiale<br><span>gratuito per chi cerca lavoro</span> <span class="free-badge">100% gratuito</span></h1>
+      <p class="hero-lead">Hai sentito parlare di AI ovunque e non sai da dove iniziare? Il Progetto GOL di Regione Lombardia ti offre 100 ore di formazione completamente gratuita — un docente reale che ti accompagna passo dopo passo, senza tecnicismi e senza fretta.</p>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Gratuito per te</div></div>
+        <div class="stat-card"><div class="stat-num">100h</div><div class="stat-label">Di formazione pratica</div></div>
+        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Edizioni erogate</div></div>
+        <div class="stat-card"><div class="stat-num">4,8/5</div><div class="stat-label">Rating Google · Atoma</div></div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#form-gol" class="btn btn-primary">Voglio partecipare — lascia i tuoi dati</a>
+        <a href="#programma" class="btn btn-secondary">Scopri il programma ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE 2: È PER ME -->
+<section class="per-me">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-tag">È per me?</span>
+      <h2 class="section-title">Questo corso è per te se ti riconosci in una di queste situazioni</h2>
+      <div class="per-me-grid">
+        <div class="per-me-card">
+          <div class="card-title">"Sono senza lavoro e non so da dove iniziare"</div>
+          <p>Hai fatto l'iscrizione al Centro per l'Impiego in Lombardia e stai cercando una nuova direzione. Questo percorso è pensato esattamente per chi si trova in questa situazione.</p>
+        </div>
+        <div class="per-me-card">
+          <div class="card-title">"Ho paura di non riuscire — non sono una persona tecnica"</div>
+          <p>Il corso parte da zero. L'unico requisito è saper usare uno smartphone o un computer. Nessuna esperienza tecnica richiesta, nessun linguaggio complicato.</p>
+        </div>
+        <div class="per-me-card">
+          <div class="card-title">"Voglio qualcosa che mi aiuti davvero a trovare lavoro"</div>
+          <p>Impari a usare l'AI per il CV, LinkedIn, le candidature e le attività lavorative di tutti i giorni. Competenze concrete, applicabili subito.</p>
+        </div>
+      </div>
+      <div class="paura-box">
+        <strong>"Ho più di 50 anni — è troppo tardi per me?"</strong>
+        <p>No. Non è mai troppo tardi. Tra i partecipanti delle edizioni precedenti molti avevano più di 50 anni e hanno completato il percorso con successo. L'età non è un ostacolo — la voglia di imparare è l'unico requisito che conta davvero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE 3: COSA IMPARI -->
+<section class="programma" id="programma">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-tag">Il programma</span>
+      <h2 class="section-title">Cosa impari in 100 ore</h2>
+      <div class="programma-grid">
+        <div class="programma-card">
+          <h4>Usare l'AI ogni giorno</h4>
+          <p>ChatGPT, Gemini, Claude — strumenti pratici per lavorare meglio, senza saper programmare.</p>
+        </div>
+        <div class="programma-card">
+          <h4>Trovare lavoro più in fretta</h4>
+          <p>CV, LinkedIn, lettere di presentazione e preparazione ai colloqui con l'aiuto dell'AI.</p>
+        </div>
+        <div class="programma-card">
+          <h4>Creare contenuti e comunicare</h4>
+          <p>Testi, post, email professionali e strumenti per la grafica — competenze richieste ovunque.</p>
+        </div>
+        <div class="programma-card">
+          <h4>Risparmiare tempo ogni giorno</h4>
+          <p>Organizzare il lavoro, gestire documenti, semplificare le attività ripetitive con l'AI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE 4: COME ACCEDI -->
+<section class="come-accedi">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-tag">Come funziona</span>
+      <h2 class="section-title">Come si accede al corso</h2>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Lascia i tuoi dati</h4>
+            <p>Compila il form qui sotto con nome, email e telefono. Ti ricontattiamo entro 24 ore per capire la tua situazione.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Verifica l'idoneità</h4>
+            <p>Insieme verifichiamo che tu abbia i requisiti per partecipare al Progetto GOL. È necessaria l'iscrizione al Centro per l'Impiego. Se non hai ancora fatto l'iscrizione, ti spieghiamo come fare.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Inizi il corso</h4>
+            <p>Una volta confermata l'idoneità, ti assegniamo all'edizione più vicina. Il corso è completamente gratuito. Al termine ricevi un attestato di competenza riconosciuto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE 5: TESTIMONIANZE -->
+<section class="testi-gol">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-tag">Testimonianze</span>
+      <h2 class="section-title">Chi ha già partecipato</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p class="testi-quote">Con pazienza e chiarezza ha saputo rendere accessibili concetti complessi, coinvolgendo sempre i partecipanti. Il corso è ben strutturato e pensato per accompagnare passo dopo passo anche chi parte da zero.</p>
+          <div class="testi-author"><strong>Laura Santambrogio</strong> · Corsista AI · Progetto GOL</div>
+        </div>
+        <div class="testi-card">
+          <p class="testi-quote">Ha tarato e modificato il tutto per adeguarsi alle nostre diverse capacità e livelli.</p>
+          <div class="testi-author"><strong>Nadir Bacis</strong> · Corsista AI · Progetto GOL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE 6: FAQ -->
+<section class="faq-gol">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Domande frequenti</h2>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">È davvero gratuito? Non devo pagare nulla?</div>
+          <div class="faq-answer">Sì. Zero euro. Nessun costo nascosto. Nessuna sorpresa. Il corso è finanziato al 100% dal Progetto GOL di Regione Lombardia.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Devo essere iscritto al Centro per l'Impiego?</div>
+          <div class="faq-answer">Sì, l'iscrizione al Centro per l'Impiego è un requisito del Progetto GOL. Se non hai ancora fatto l'iscrizione, ti spieghiamo come fare durante il primo contatto — è una procedura semplice e gratuita.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Ho più di 50 anni — posso partecipare?</div>
+          <div class="faq-answer">Assolutamente sì. Tra i partecipanti delle edizioni precedenti molti avevano più di 50 anni e hanno completato il percorso con successo. L'età non è un ostacolo — la voglia di imparare è l'unico requisito che conta davvero.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Non so usare il computer — ce la faccio?</div>
+          <div class="faq-answer">Il corso richiede una conoscenza base del computer — saper navigare su internet, aprire un browser e usare una email. Non servono competenze avanzate, ma un minimo di dimestichezza con il PC è necessario per seguire le lezioni. Se non sei sicuro del tuo livello di partenza, scrivici — valutiamo insieme la situazione prima di iscriverti.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Il corso è online o in presenza?</div>
+          <div class="faq-answer">La modalità viene definita insieme prima dell'inizio del percorso, in base alle esigenze e all'edizione disponibile.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Che attestato ricevo alla fine?</div>
+          <div class="faq-answer">Al termine del percorso ricevi un attestato di competenza riconosciuto, rilasciato da Atoma SRL ente accreditato Regione Lombardia. Un documento concreto da aggiungere al CV e al profilo LinkedIn.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEZIONE 7: FORM -->
+<section class="form-gol" id="form-gol">
+  <div class="container">
+    <div class="fade-in">
+      <div class="form-box">
+
+        <div id="formContent">
+          <h2 class="section-title">Voglio partecipare al corso gratuito</h2>
+          <p class="form-intro">Lascia i tuoi dati — ti ricontattiamo entro 24 ore per spiegarti tutto e verificare insieme i requisiti di partecipazione. Nessun impegno, nessuna sorpresa.</p>
+
+          <form id="golForm" novalidate>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Nome e cognome *"
+              class="form-field"
+              required
+              autocomplete="name"
+              aria-label="Nome e cognome"
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email *"
+              class="form-field"
+              required
+              autocomplete="email"
+              aria-label="Email"
+            >
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Telefono *"
+              class="form-field"
+              required
+              autocomplete="tel"
+              aria-label="Telefono"
+            >
+            <button type="submit" class="form-submit" id="submitBtn">
+              Invia la richiesta — ti ricontattiamo entro 24h
+            </button>
+            <p class="form-error" id="formError">Si è verificato un errore. Riprova o scrivici a roberto@sonodigitale.it</p>
+          </form>
+
+          <p class="form-legal">
+            Cliccando su "Invia la richiesta", acconsenti al trattamento dei dati secondo la nostra
+            <a href="/privacy">Privacy Policy</a>.
+          </p>
+        </div>
+
+        <div class="form-success" id="formSuccess">
+          <h3>Richiesta inviata!</h3>
+          <p>Grazie — ti ricontattiamo entro 24 ore per spiegarti tutto.<br>Controlla anche la tua email per la conferma.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">SONODIGITALE</div>
+        <div class="footer-tagline">AI accessibile | Formazione finanziata | Per crescere</div>
+        <span>Roberto Schiraldi</span>
+        <span>Formatore AI accreditato</span>
+        <span>Regione Lombardia</span>
+        <span class="footer-collab-label">In collaborazione con</span>
+        <span class="footer-collab-name">Atoma SRL — Milano</span>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Pagine</div>
+        <a href="/formazione">Formazione e opportunità</a>
+        <a href="/chi-sono">Chi sono</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contatti">Contatti</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contatti</div>
+        <span>Varese, Lombardia</span>
+        <span>roberto@sonodigitale.it</span>
+        <a href="https://www.linkedin.com/in/roberto-schiraldi" class="highlight" target="_blank" rel="noopener">LinkedIn →</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Resta aggiornato</div>
+        <span>Tips AI, bandi e opportunità di formazione nella tua email.</span>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="La tua email" aria-label="Email per newsletter">
+          <button type="button">Iscriviti</button>
+        </div>
+        <div class="footer-newsletter-note">Niente spam. Solo valore. Cancellati quando vuoi.</div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>SONODIGITALE di Roberto Schiraldi · P.IVA: [da inserire] · © 2026</span>
+      <span><a href="/privacy">Privacy Policy</a> · <a href="/cookie">Cookie Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  document.addEventListener('click', (e) => {
+    const dropdown = document.getElementById('navDropdownFormazione');
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+      dropdown.querySelector('.nav-dropdown-btn').setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.getElementById('golForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const errorEl = document.getElementById('formError');
+    const submitBtn = document.getElementById('submitBtn');
+
+    errorEl.style.display = 'none';
+
+    if (!nome || !email || !telefono) {
+      errorEl.textContent = 'Per favore compila tutti i campi obbligatori.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      errorEl.textContent = 'Inserisci un indirizzo email valido.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Invio in corso...';
+
+    try {
+      const response = await fetch('[WEBHOOK-N8N-URL]', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome,
+          email,
+          telefono,
+          pagina: 'progetto-gol',
+          data: new Date().toISOString()
+        })
+      });
+
+      if (response.ok) {
+        document.getElementById('formContent').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        throw new Error('Errore server');
+      }
+    } catch (err) {
+      errorEl.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Invia la richiesta — ti ricontattiamo entro 24h';
+    }
+  });
+</script>
+
+</body>
+</html>
